@@ -10,7 +10,7 @@ def turn(board)
     turn(board)
   else
     board = move(board, input)
-    #display_board(board)
+    display_board(board)
   end
 end
 
@@ -46,4 +46,5 @@ end
 
 def move(board, index, token = "X")
   board[index] = token
+  return board
 end
