@@ -9,7 +9,7 @@ def turn(board)
     puts "The location you entered is either off the board, or is already occupied."
     turn(board)
   else
-    board = board.move(board, input)
+    board = move(board, input)
     display_board(board)
   end
 end
