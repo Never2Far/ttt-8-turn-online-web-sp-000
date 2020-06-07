@@ -1,5 +1,17 @@
 def turn(board)
   puts "Please enter 1-9:"
+  input = input_to_index(gets.strip)
+
+  if input == -1
+    puts "Invalid input---input must contain a number."
+    turn(board)
+  elsif !valid_move?(board, input)
+    puts "The location you entered is either off the board, or is already occupied."
+    turn(board)
+  else
+    board = board.move(board, input)
+    display_board(board)
+
 end
 
 
